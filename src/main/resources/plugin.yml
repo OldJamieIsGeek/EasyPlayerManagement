@@ -1,0 +1,10 @@
+name: EasyTeleport
+version: '${project.version}'
+main: dev.jamieisgeek.easyteleport.EasyTeleport
+api-version: 1.18
+authors: [ JamieIsGeek ]
+description: A plugin with a GUI Based player list for easy player management
+commands:
+  list:
+    description: Displays a GUI with all online players!
+    usage: /<command>
