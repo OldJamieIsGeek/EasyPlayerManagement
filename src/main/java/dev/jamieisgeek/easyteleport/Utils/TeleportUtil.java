@@ -7,7 +7,7 @@ import org.bukkit.event.inventory.InventoryClickEvent;
 
 public class TeleportUtil {
 
-    public static void TeleportToPlayer(InventoryClickEvent e, Player p, Player tpPlayer) {
+    public static void TeleportToPlayer(Player p, Player tpPlayer) {
 
         if(p.hasPermission("etp.tp")) {
             p.closeInventory();
