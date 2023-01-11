@@ -14,7 +14,7 @@ public final class EasyTeleport extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new MenuClickListener(), this);
 
         this.getLogger.info(" ");
-        this.getLogger.info("[EasyTP] | Plugin Enabled!");
+        this.getLogger.info("Plugin Enabled!");
         this.getLogger.info(" ");
 
     }
@@ -23,7 +23,7 @@ public final class EasyTeleport extends JavaPlugin {
     public void onDisable() {
 
         this.getLogger.info( " ");
-        this.getLogger.info("[EasyTP] | Plugin Disabled!");
+        this.getLogger.info("Plugin Disabled!");
         this.getLogger.info(" ");
     }
 }
