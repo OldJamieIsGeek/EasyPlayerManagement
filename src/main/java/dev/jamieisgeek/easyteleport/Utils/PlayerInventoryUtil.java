@@ -21,8 +21,7 @@ public class PlayerInventoryUtil {
         }
         ArrayList<Player> list = new ArrayList<>(p.getServer().getOnlinePlayers());
 
-        Inventory playerList;
-        playerList = Bukkit.createInventory(p, 54, ChatColor.DARK_GREEN + "Online Players");
+        Inventory playerList = Bukkit.createInventory(p, 54, ChatColor.DARK_GREEN + "Online Players");
 
         for (Player player : list) {
             ItemStack playerHead = new ItemStack(Material.PLAYER_HEAD, 1);
@@ -36,6 +35,7 @@ public class PlayerInventoryUtil {
             String playerGM = player.getGameMode().toString();
 
             meta.setDisplayName(ChatColor.GREEN + player.getDisplayName());
+           
             ArrayList<String> lore = new ArrayList<>();
             lore.add(ChatColor.GREEN + "Player Health: " + ChatColor.WHITE + player.getHealth());
             lore.add(ChatColor.GREEN + "Player Gamemode: " + ChatColor.WHITE + playerGM);
