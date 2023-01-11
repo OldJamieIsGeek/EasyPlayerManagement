@@ -3,7 +3,6 @@ package dev.jamieisgeek.easyteleport.Utils;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.entity.Player;
-import org.bukkit.event.inventory.InventoryClickEvent;
 
 public class TeleportUtil {
 
