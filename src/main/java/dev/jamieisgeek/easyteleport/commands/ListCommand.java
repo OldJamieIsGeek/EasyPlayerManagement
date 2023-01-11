@@ -8,8 +8,6 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-import java.util.logging.Logger;
-
 public class ListCommand implements CommandExecutor {
 
     Logger logger = Bukkit.getLogger();
@@ -17,17 +15,18 @@ public class ListCommand implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
 
-        if(sender instanceof Player) {
-            Player p = (Player) sender;
-
-            if(p.hasPermission("etp.list")) {
-                PlayerInventoryUtil.openInventory(p);
-            } else {
-                p.sendMessage(ChatColor.RED + "Error: Missing Permission: " + ChatColor.WHITE + "etp.list");
-            }
-        } else {
-            logger.warning("You must run this command in-game!");
+        if(!sender instanceof Player) {
+            logger.warning("This command must be run by a player!");
         }
+        
+        Player p = (Player) sender;
+
+        if(!p.hasPermission("etp.list")) {
+            p.sendMessage(ChatColor.RED + "Error: Missing Permission: " + ChatColor.WHITE + "etp.list");
+            return;
+        }
+        
+        PlayerInventoryUtil.openInventory(p);
 
         return true;
     }
