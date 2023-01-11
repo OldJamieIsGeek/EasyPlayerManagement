@@ -5,11 +5,7 @@ import dev.jamieisgeek.easyteleport.commands.ListCommand;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import java.util.logging.Logger;
-
 public final class EasyTeleport extends JavaPlugin {
-
-    Logger logger = Bukkit.getLogger();
 
     @Override
     public void onEnable() {
@@ -17,17 +13,17 @@ public final class EasyTeleport extends JavaPlugin {
         getCommand("list").setExecutor(new ListCommand());
         getServer().getPluginManager().registerEvents(new MenuClickListener(), this);
 
-        logger.info(" ");
-        logger.info("[EasyTP] | Plugin Enabled!");
-        logger.info(" ");
+        this.getLogger.info(" ");
+        this.getLogger.info("Plugin Enabled!");
+        this.getLogger.info(" ");
 
     }
 
     @Override
     public void onDisable() {
 
-        logger.info( " ");
-        logger.info("[EasyTP] | Plugin Disabled!");
-        logger.info(" ");
+        this.getLogger.info( " ");
+        this.getLogger.info("Plugin Disabled!");
+        this.getLogger.info(" ");
     }
 }
